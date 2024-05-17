@@ -1,27 +1,5 @@
-# MyApp
+Hola, voy a comentar un poco el proyecto y lo que he ido haciendo. Por temas de tiempo entre clases del grado superior y proyectos de la empresa no he podido realizarlo de la manera en la que querría, llegando a cumplir de manera justa y limitada lo que se pide, pero es lo que he podido hacer.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.4.
+He seguido en un principio el curso al pie de la letra, desviandome del hilo en la parte final, ya que se pide una función de editar película. El problema me lo encuentro a la hora de configurar correctamente el endpoint del metodo Edit del archivo peli-api-service.ts, implementado en la clase peli-edit-component.ts. A la hora de introducir los datos a modificar en la pelicula, me salta en la api el erro 404 de not found, he intentado con varias rutas como 'http://localhost:3001/movies' ó  'http://localhost:3001/api/movies' y nada, me sigue dando el error. El caso es que el método GET sí que lo hace con esa ruta, entonces no sé por qué no encuentra en el endpoint con el método put.
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Más allá de eso, creo que la lógica está bien implementada, así como los JSON. He hecho lo que he podido, espero que llegue a un mínimo y espero con ganas la correción para ver cómo podría haberlo solucionado, soy muy nuevo en el tema del uso de apis y esta ha sido mi primera experiencia con Angular.
