@@ -1,25 +1,20 @@
 import { Cinema } from "./cinema.model";
 
 export class Peli {
+    id: number;
     name: string;
     director: string;
-    dateRelease: Date;
-    imageUrl?: string;
+    year: number;
+    poster?: string;
     cinemas?: Cinema[]
 
-    constructor(name: string, director: string, dateRelease: string = "", imageUrl?: string, cinemas?: Cinema[]) {
+    constructor(id: number, name: string, director: string, year: number, imageUrl?: string, cinemas?: Cinema[]) {
+        this.id = id;
         this.name = name;
         this.director = director;
-        this.dateRelease = new Date(dateRelease);
-        this.imageUrl = imageUrl;
+        this.year = year;
+        this.poster = imageUrl;
         this.cinemas = cinemas;
     }
 
-    getYearsFromRelease(): number {
-        const milliseconds = Date.now() - this.dateRelease.getTime();
-        return this.convertToYears(new Date(milliseconds))
-    }
-    
-    private convertToYears = (date: Date): number =>
-        Math.abs(date.getUTCFullYear() - 1970)
 }

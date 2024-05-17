@@ -1,17 +1,26 @@
 import { Injectable } from '@angular/core';
 import { Peli } from '../model/peli.model';
+import { peliMockCollection } from './peli-api.mock';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class PeliApiService {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
-  getAll(): Promise<Peli[]>{
-    return Promise.resolve([
-      new Peli('Blade Runner', "Denis Villeneuve", "1982", 'https://raw.githubusercontent.com/Lemoncode/angular-lab-2023/main/media/bladerunner.png'),
-      new Peli('Interstellar', "Christopher Nolan", "2014", 'https://raw.githubusercontent.com/Lemoncode/angular-lab-2023/main/media/interstellar.png'),
-    ]);
+  getAll(): Observable<Peli[]>{
+  return this.http.get<Peli[]>('http://localhost:3001/movies')
   }
+
+  Edit(peli: Peli): Observable<Peli> {
+    return this.http.put<Peli>('http://localhost:3001/movies', peli)
+  }
+
+  // Edit(peli: Peli): Observable<Peli> {
+  // return this.http.put<Peli>('./api/pelis', peli)
+  // } sé que se puede poner así también
 }

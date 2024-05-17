@@ -1,0 +1,10 @@
+<div class="container">
+  <form *ngIf="peliForm"
+  [formGroup]="peliForm">
+    <app-input-wrapper name="name" label="name" formControlName="name"></app-input-wrapper>
+    <app-input-wrapper name="imageUrl" label="Picture Url" formControlName="imageUrl"></app-input-wrapper>
+    <app-input-wrapper id="year" name="year" label="year" formControlName="year"></app-input-wrapper>
+
+  <button (click)="handleSaveClick()">Guardar</button>
+</form>
+</div>

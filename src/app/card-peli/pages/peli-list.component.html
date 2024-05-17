@@ -1,0 +1,8 @@
+<div *ngFor="let peli of pelis">
+    <app-card-peli [peli]="peli" (showCinemaList)="onShowCinemaList($event)"/>
+</div>
+
+<app-cinema-list *ngIf="showCinemaList"
+ (close)="onCloseCinemaList()"
+[cinemas]="cinemas"
+></app-cinema-list>

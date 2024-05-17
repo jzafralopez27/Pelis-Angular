@@ -1,3 +1,15 @@
 label{
     font-weight: bold;
 }
+
+nav{
+    display:flex;
+    justify-content: start;
+    column-gap: 15px;
+    padding: 10px;
+    background-color:aquamarine;
+    border-bottom: 1px solid;
+    text-align: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+}

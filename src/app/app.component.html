@@ -1,6 +1,6 @@
-<h1>Lista Pelis</h1>
-
-<div *ngFor="let peli of pelis">
-    <app-card-peli [peli] = "peli" (showCinemaList)="onShowCinemaList($event)"/>
-</div>
-<app-cinema-list *ngIf="showCinemaList"></app-cinema-list>
+<header>
+  <nav>
+    <a routerLink="/">Home</a>
+  </nav>
+</header>
+<router-outlet></router-outlet>

@@ -24,8 +24,8 @@
 .card .card_image img {
     width: inherit;
     height: inherit;
-    border-radius: 40px;
-    object-fit: cover;
+    border-radius: 35px;
+    object-fit: contain;
 }
 
 .card .card_title{
@@ -43,12 +43,9 @@
     width: 90%;
     border-radius: 10px;
     transform: translateX(-50%);
-    background: rgba(255, 255, 255, 255);
+    background: rgba(0, 0, 0, 0);
+    color: black;
 }
 .card_image img {
     max-width: 100%;
   }
-  
-.title-white{
-    color:rgb(255, 255, 255);
-}

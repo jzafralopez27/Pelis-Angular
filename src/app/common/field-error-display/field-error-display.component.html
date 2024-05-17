@@ -1,0 +1,4 @@
+<div *ngIf="fieldNgModel?.invalid && (fieldNgModel?.dirty || fieldNgModel?.touched)" class="errors">
+    <div *ngIf="fieldNgModel?.errors?.['required']">El campo a rellenar es obligatorio</div>
+    <div *ngIf="fieldNgModel?.errors?.['pattern']">El formato del campo no es correcto</div>
+    </div>
